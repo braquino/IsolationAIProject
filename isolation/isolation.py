@@ -10,6 +10,7 @@ be available to project reviewers.
 import random
 import timeit
 from copy import copy
+from sample_players import HumanPlayer
 
 TIME_LIMIT_MILLIS = 150
 
