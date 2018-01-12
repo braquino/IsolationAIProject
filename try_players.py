@@ -3,12 +3,12 @@ from game_agent import *
 from sample_players import HumanPlayer
 import timeit
 
-player1 = AlphaBetaPlayer(score_fn=custom_score)
+player1 = MinimaxPlayer(score_fn=custom_score)
 player2 = AlphaBetaPlayer(score_fn=custom_score)
 
 board = Board(player1, player2)
-
-print(board.play(250))
+board._board_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 41, 57]
+print(board.play(250000))
 
 print(board.to_string())
 print(board.get_legal_moves(player1))
